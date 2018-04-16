@@ -19,8 +19,13 @@ public class MainDemoApp {
 		MembershipDAO theMembershipDAO = 
 				context.getBean("membershipDAO", MembershipDAO.class);
 	
+		
+		Account myAccount = new Account();
+		myAccount.setName("Sergio");
+		myAccount.setLevel("Platinum");
+
 		// call the business method
-		theAccountDAO.addAccount(new Account(), true);
+		theAccountDAO.addAccount(myAccount, true);
 		theAccountDAO.doWork();
 		
 		// call the accountdao getter/setter methods
